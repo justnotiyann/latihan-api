@@ -1,11 +1,10 @@
 var button = document.querySelector('#search')
 var input = document.querySelector('.value')
 var result = document.querySelector('.result')
-// const apiKey = "61b9ea19e0a07015d5486b04a7ae53a7"
 
-// custom output 
+// Middleware haha
 function cek(m) {
-    console.log(m)
+  console.log(m)
 }
 
 button.addEventListener('click', function () {
@@ -30,3 +29,17 @@ button.addEventListener('click', function () {
               `
         })
 })
+
+
+// Testing
+// const getInput = document.querySelector('#testing')
+// const getButton = document.querySelector('#button-submit')
+
+// getButton.addEventListener('click', function () {
+//   fetch(`https://pokeapi.co/api/v2/pokemon/${getInput.value}`)
+//     .then(res => res.json())
+//     .then(res => {
+//       console.log(getInput.value)
+//       console.log(res)
+//     })
+// })
