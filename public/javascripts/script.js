@@ -16,30 +16,28 @@ button.addEventListener('click', function () {
             result.innerHTML =
               `
               <div class="row">
-              <div class="col-6">
-                <img src="" alt="Pokemon" />
-              </div>
-              <div class="col-6">
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th scope="col">ID Pokemon</th>
-                      <th scope="col">Nama</th>
-                      <th scope="col">Tinggi</th>
-                      <th scope="col">Berat</th>
-                      <th scope="col">Generasi</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">${res.id}</th>
-                      <td>${res.forms[0].name}</td>
-                      <td>${res.height}</td>
-                      <td>${res.weight}</td>
-                      <td>${res.generation.name}</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="col-12">
+                  <table class="table">
+                  <p class="fw-bold text-center">Tabel Data Pokemon</p>
+                      <thead>
+                        <tr>
+                          <th scope='col'>Gambar</th>
+                          <th scope="col">ID Pokemon</th>
+                          <th scope="col">Nama</th>
+                          <th scope="col">Tinggi</th>
+                          <th scope="col">Berat</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><img src="${res.sprites.front_default}" alt="Pokemon" class="text-center img-thumbnail rounded-circle" /></td>
+                          <td>${res.id}</td>
+                          <td>${res.name}</td>
+                          <td>${res.height} cm</td>
+                          <td>${res.weight} kg</td>
+                        </tr>
+                      </tbody>
+                    </table>
               </div>
             </div>
               `
