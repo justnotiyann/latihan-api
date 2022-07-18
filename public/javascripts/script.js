@@ -13,34 +13,34 @@ button.addEventListener('click', function () {
         .then(res => res.json())
         .then(res => {
             cek(input.value) // Belajar middleware, jadi setiap pada sebuah proses dapat kita akses
-            console.log(res)
             result.innerHTML =
-                `
-                <p class="">Informasi Pokemon</p>
-                <div class="row d-flex justify-content-center align-items-center">
-                  <div class="col-6">
-                    <img src="${res.sprites.front_default}" alt="" width="80%" class="image-thumbnail rounded-circle border" />
-                  </div>
-                <div class="col-6">
-                  <p>Nama Pokemon : ${res.name}</p>
-                  <p>Tinggi Pokemon : ${res.height}</p>
-                  <p>Berat Pokemon : ${res.weight}</p>
-                </div>
-              </div>
               `
+              <div class="row">
+                <div class="col-12">
+                  <table class="table">
+                  <p class="fw-bold text-center">Tabel Data Pokemon</p>
+                      <thead>
+                        <tr>
+                          <th scope='col'>Gambar</th>
+                          <th scope="col">ID Pokemon</th>
+                          <th scope="col">Nama</th>
+                          <th scope="col">Tinggi</th>
+                          <th scope="col">Berat</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><img src="${res.sprites.front_default}" alt="Pokemon" class="text-center img-thumbnail rounded-circle" /></td>
+                          <td>${res.id}</td>
+                          <td>${res.name}</td>
+                          <td>${res.height} cm</td>
+                          <td>${res.weight} kg</td>
+                        </tr>
+                      </tbody>
+                    </table>
+              </div>
+            </div>
+              `
+                
         })
 })
-
-
-// Testing
-// const getInput = document.querySelector('#testing')
-// const getButton = document.querySelector('#button-submit')
-
-// getButton.addEventListener('click', function () {
-//   fetch(`https://pokeapi.co/api/v2/pokemon/${getInput.value}`)
-//     .then(res => res.json())
-//     .then(res => {
-//       console.log(getInput.value)
-//       console.log(res)
-//     })
-// })
