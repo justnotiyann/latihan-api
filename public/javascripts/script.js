@@ -33,8 +33,8 @@ button.addEventListener('click', function () {
                           <td><img src="${res.sprites.front_default}" alt="Pokemon" class="text-center img-thumbnail rounded-circle" /></td>
                           <td>${res.id}</td>
                           <td>${res.name}</td>
-                          <td>${res.height} cm</td>
-                          <td>${res.weight} kg</td>
+                          <td>${res.height} feet</td>
+                          <td>${res.weight} ponds</td>
                         </tr>
                       </tbody>
                     </table>
