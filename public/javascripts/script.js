@@ -16,10 +16,11 @@ button.addEventListener('click', function () {
             console.log(res)
             result.innerHTML =
                 `
+                <p class="">Informasi Pokemon</p>
                 <div class="row d-flex justify-content-center align-items-center">
-                <div class="col-6">
-                  <img src="${res.sprites.front_default}" alt="" width="100%" class="image-thumbnail" />
-                </div>
+                  <div class="col-6">
+                    <img src="${res.sprites.front_default}" alt="" width="80%" class="image-thumbnail rounded-circle border" />
+                  </div>
                 <div class="col-6">
                   <p>Nama Pokemon : ${res.name}</p>
                   <p>Tinggi Pokemon : ${res.height}</p>
