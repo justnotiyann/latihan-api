@@ -13,34 +13,36 @@ button.addEventListener('click', function () {
         .then(res => res.json())
         .then(res => {
             cek(input.value) // Belajar middleware, jadi setiap pada sebuah proses dapat kita akses
-            console.log(res)
             result.innerHTML =
-                `
-                <p class="">Informasi Pokemon</p>
-                <div class="row d-flex justify-content-center align-items-center">
-                  <div class="col-6">
-                    <img src="${res.sprites.front_default}" alt="" width="80%" class="image-thumbnail rounded-circle border" />
-                  </div>
-                <div class="col-6">
-                  <p>Nama Pokemon : ${res.name}</p>
-                  <p>Tinggi Pokemon : ${res.height}</p>
-                  <p>Berat Pokemon : ${res.weight}</p>
-                </div>
-              </div>
               `
+              <div class="row">
+              <div class="col-6">
+                <img src="" alt="Pokemon" />
+              </div>
+              <div class="col-6">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">ID Pokemon</th>
+                      <th scope="col">Nama</th>
+                      <th scope="col">Tinggi</th>
+                      <th scope="col">Berat</th>
+                      <th scope="col">Generasi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">${res.id}</th>
+                      <td>${res.forms[0].name}</td>
+                      <td>${res.height}</td>
+                      <td>${res.weight}</td>
+                      <td>${res.generation.name}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+              `
+                
         })
 })
-
-
-// Testing
-// const getInput = document.querySelector('#testing')
-// const getButton = document.querySelector('#button-submit')
-
-// getButton.addEventListener('click', function () {
-//   fetch(`https://pokeapi.co/api/v2/pokemon/${getInput.value}`)
-//     .then(res => res.json())
-//     .then(res => {
-//       console.log(getInput.value)
-//       console.log(res)
-//     })
-// })
