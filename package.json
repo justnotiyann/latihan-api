@@ -1,0 +1,23 @@
+{
+  "name": "latihan-api",
+  "version": "1.0.0",
+  "description": "Latihan API AANGG",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justnotiyann/latihan-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/justnotiyann/latihan-api/issues"
+  },
+  "homepage": "https://github.com/justnotiyann/latihan-api#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
