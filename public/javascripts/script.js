@@ -2,8 +2,11 @@
 let getInput  = document.querySelector('#input')
 let getButton = document.querySelector('#search')
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> dev
 getButton.addEventListener('click', function () {
   // Tangkap value pada input
   let value = getInput.value
@@ -51,6 +54,14 @@ button.addEventListener('click', function () {
 >>>>>>> 9ed3847dba504049492b9272b82ac9551a3ccc8a
 })
 
+getButton.addEventListener('keyup', function () {
+  if ('keyup' == 'Enter') {
+  let value = getInput.value
+  let data = value.toLowerCase()
+    getFetch(data)
+  }
+})
+
 // Function Fetch
 function getFetch(data) {
     let api = `https://pokeapi.co/api/v2/pokemon/${data}`
@@ -67,8 +78,12 @@ function getDatas(res) {
   const namaPokemon = res.name.toUpperCase()
   const imgPokemon = res.sprites.front_default
   const ability = res.abilities[0].ability.name
+  const stats = res.stats[0].base_stat
+  const id = res.id
   console.log(namaPokemon, imgPokemon, ability)
   document.querySelector('#gambarPokemon').src = imgPokemon
-  document.querySelector('.card-title').innerText = namaPokemon
-  document.querySelector('.ability').innerText = ability
+  document.querySelector('#id').innerText = id
+  document.querySelector('#nama').innerText = namaPokemon
+  document.querySelector('#ability').innerText = ability
+  document.querySelector('#skill').innerText = stats
 }
